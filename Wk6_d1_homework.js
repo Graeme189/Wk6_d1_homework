@@ -1,37 +1,41 @@
-// // ### Episode 1
+// // // ### Episode 1
+// //
 //
-
-// I think the below will return 'The murderer is Miss Scarlet'.
-const scenario = {
-  murderer: 'Miss Scarlet',
-  room: 'Library',
-  weapon: 'Rope'
-};
-
-const declareMurderer = function() {
-  return `The murderer is ${scenario.murderer}.`;
-}
-
-const verdict = declareMurderer();
-console.log(verdict);
-
-
-// // #### Episode 2
-//
-// const murderer = 'Professor Plum';
-//
-// const changeMurderer = function() {
-//   murderer = 'Mrs. Peacock';
-// }
+// // I think the below will return 'The murderer is Miss Scarlet'.
+// const scenario = {
+//   murderer: 'Miss Scarlet',
+//   room: 'Library',
+//   weapon: 'Rope'
+// };
 //
 // const declareMurderer = function() {
-//   return `The murderer is ${murderer}.`;
+//   return `The murderer is ${scenario.murderer}.`;
 // }
 //
-// changeMurderer();
 // const verdict = declareMurderer();
 // console.log(verdict);
 //
+// // Result - CORRECT!
+
+// // #### Episode 2
+//
+// I think this will return an error.
+const murderer = 'Professor Plum';
+
+const changeMurderer = function() {
+  murderer = 'Mrs. Peacock';
+}
+
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+//
+// Result - CORRECT!
+
 // // #### Episode 3
 //
 // let murderer = 'Professor Plum';
