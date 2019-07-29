@@ -122,72 +122,75 @@
 // // #### Episode 7
 //
 // I think this will return 'The murderer is Colonel Mustard'.
-
-let murderer = 'Professor Plum';
-
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
-
-  const plotTwist = function() {
-    let murderer = 'Colonel Mustard';
-
-    const unexpectedOutcome = function() {
-      murderer = 'Miss Scarlet';
-    }
-
-    unexpectedOutcome();
-  }
-
-  plotTwist();
-}
-
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
 //
-// Result - WRONG! It would appear to be Mr Green. I'm assuming this has something to do with the fact that 'let' is missing from the murderer declaration for Mr Green.
-
-// // #### Episode 8
+// let murderer = 'Professor Plum';
 //
-// const scenario = {
-//   murderer: 'Mrs. Peacock',
-//   room: 'Conservatory',
-//   weapon: 'Lead Pipe'
-// };
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
 //
-// const changeScenario = function() {
-//   scenario.murderer = 'Mrs. Peacock';
-//   scenario.room = 'Dining Room';
+//   const plotTwist = function() {
+//     let murderer = 'Colonel Mustard';
 //
-//   const plotTwist = function(room) {
-//     if (scenario.room === room) {
-//       scenario.murderer = 'Colonel Mustard';
+//     const unexpectedOutcome = function() {
+//       murderer = 'Miss Scarlet';
 //     }
 //
-//     const unexpectedOutcome = function(murderer) {
-//       if (scenario.murderer === murderer) {
-//         scenario.weapon = 'Candle Stick';
-//       }
-//     }
-//
-//     unexpectedOutcome('Colonel Mustard');
+//     unexpectedOutcome();
 //   }
 //
-//   plotTwist('Dining Room');
+//   plotTwist();
 // }
 //
-// const declareWeapon = function() {
-//   return `The weapon is ${scenario.weapon}.`
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
 // }
 //
-// changeScenario();
-// const verdict = declareWeapon();
+// changeMurderer();
+// const verdict = declareMurderer();
 // console.log(verdict);
+// //
+// // Result - WRONG! It would appear to be Mr Green. I'm assuming this has something to do with the fact that 'let' is missing from the murderer declaration for Mr Green.
+
+// // #### Episode 8
+
+// I think this will return 'The weapon is Candle Stick'
+const scenario = {
+  murderer: 'Mrs. Peacock',
+  room: 'Conservatory',
+  weapon: 'Lead Pipe'
+};
+
+const changeScenario = function() {
+  scenario.murderer = 'Mrs. Peacock';
+  scenario.room = 'Dining Room';
+
+  const plotTwist = function(room) {
+    if (scenario.room === room) {
+      scenario.murderer = 'Colonel Mustard';
+    }
+
+    const unexpectedOutcome = function(murderer) {
+      if (scenario.murderer === murderer) {
+        scenario.weapon = 'Candle Stick';
+      }
+    }
+
+    unexpectedOutcome('Colonel Mustard');
+  }
+
+  plotTwist('Dining Room');
+}
+
+const declareWeapon = function() {
+  return `The weapon is ${scenario.weapon}.`
+}
+
+changeScenario();
+const verdict = declareWeapon();
+console.log(verdict);
 //
+// Result - CORRECT!
+
 // #### Episode 9
 //
 // let murderer = 'Professor Plum';
