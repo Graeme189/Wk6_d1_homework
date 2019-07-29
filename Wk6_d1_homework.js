@@ -154,57 +154,60 @@
 // // #### Episode 8
 
 // I think this will return 'The weapon is Candle Stick'
-const scenario = {
-  murderer: 'Mrs. Peacock',
-  room: 'Conservatory',
-  weapon: 'Lead Pipe'
-};
-
-const changeScenario = function() {
-  scenario.murderer = 'Mrs. Peacock';
-  scenario.room = 'Dining Room';
-
-  const plotTwist = function(room) {
-    if (scenario.room === room) {
-      scenario.murderer = 'Colonel Mustard';
-    }
-
-    const unexpectedOutcome = function(murderer) {
-      if (scenario.murderer === murderer) {
-        scenario.weapon = 'Candle Stick';
-      }
-    }
-
-    unexpectedOutcome('Colonel Mustard');
-  }
-
-  plotTwist('Dining Room');
-}
-
-const declareWeapon = function() {
-  return `The weapon is ${scenario.weapon}.`
-}
-
-changeScenario();
-const verdict = declareWeapon();
-console.log(verdict);
+// const scenario = {
+//   murderer: 'Mrs. Peacock',
+//   room: 'Conservatory',
+//   weapon: 'Lead Pipe'
+// };
+//
+// const changeScenario = function() {
+//   scenario.murderer = 'Mrs. Peacock';
+//   scenario.room = 'Dining Room';
+//
+//   const plotTwist = function(room) {
+//     if (scenario.room === room) {
+//       scenario.murderer = 'Colonel Mustard';
+//     }
+//
+//     const unexpectedOutcome = function(murderer) {
+//       if (scenario.murderer === murderer) {
+//         scenario.weapon = 'Candle Stick';
+//       }
+//     }
+//
+//     unexpectedOutcome('Colonel Mustard');
+//   }
+//
+//   plotTwist('Dining Room');
+// }
+//
+// const declareWeapon = function() {
+//   return `The weapon is ${scenario.weapon}.`
+// }
+//
+// changeScenario();
+// const verdict = declareWeapon();
+// console.log(verdict);
 //
 // Result - CORRECT!
 
 // #### Episode 9
 //
-// let murderer = 'Professor Plum';
-//
-// if (murderer === 'Professor Plum') {
-//   let murderer = 'Mrs. Peacock';
-// }
-//
-// const declareMurderer = function() {
-//   return `The murderer is ${murderer}.`;
-// }
-//
-// const verdict = declareMurderer();
-// console.log(verdict);
+// I think this will return 'The murderer is Mrs Peacock'.
+let murderer = 'Professor Plum';
+
+if (murderer === 'Professor Plum') {
+  let murderer = 'Mrs. Peacock';
+}
+
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+const verdict = declareMurderer();
+console.log(verdict);
+
+// Result - WRONG! I was wavering over whether the 'let' on line 200 changes the murderer variable outside of its curly brackets. I'm now assuming it doesn't.
 //
 // // ### Extensions
 // //
