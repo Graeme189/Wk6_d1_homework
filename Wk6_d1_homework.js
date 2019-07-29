@@ -19,38 +19,40 @@
 
 // // #### Episode 2
 //
-// I think this will return an error.
-const murderer = 'Professor Plum';
-
-const changeMurderer = function() {
-  murderer = 'Mrs. Peacock';
-}
-
-const declareMurderer = function() {
-  return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
+// // I think this will return an error.
+// const murderer = 'Professor Plum';
 //
-// Result - CORRECT!
-
-// // #### Episode 3
-//
-// let murderer = 'Professor Plum';
+// const changeMurderer = function() {
+//   murderer = 'Mrs. Peacock';
+// }
 //
 // const declareMurderer = function() {
-//   let murderer = 'Mrs. Peacock';
 //   return `The murderer is ${murderer}.`;
 // }
 //
-// const firstVerdict = declareMurderer();
-// console.log('First Verdict: ', firstVerdict);
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
+// //
+// // Result - CORRECT!
+
+// // #### Episode 3
+// I think this will return 'First Verdict: Mrs Peacock' and 'Second Verdict: Professor Plum'.
+let murderer = 'Professor Plum';
+
+const declareMurderer = function() {
+  let murderer = 'Mrs. Peacock';
+  return `The murderer is ${murderer}.`;
+}
+
+const firstVerdict = declareMurderer();
+console.log('First Verdict: ', firstVerdict);
+
+const secondVerdict = `The murderer is ${murderer}.`;
+console.log('Second Verdict: ', secondVerdict);
 //
-// const secondVerdict = `The murderer is ${murderer}.`;
-// console.log('Second Verdict: ', secondVerdict);
-//
+// Result - CORRECT!
+
 // // #### Episode 4
 //
 // let suspectOne = 'Miss Scarlet';
