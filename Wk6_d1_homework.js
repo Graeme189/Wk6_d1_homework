@@ -97,49 +97,19 @@
 // // #### Episode 6
 
 // I think this will return 'The murderer is Mrs White'.
-let murderer = 'Colonel Mustard';
-
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
-
-  const plotTwist = function() {
-    murderer = 'Mrs. White';
-  }
-
-  plotTwist();
-}
-
-const declareMurderer = function () {
-  return `The murderer is ${murderer}.`;
-}
-
-changeMurderer();
-const verdict = declareMurderer();
-console.log(verdict);
-//
-// Result - CORRECT!
-
-// // #### Episode 7
-//
-// let murderer = 'Professor Plum';
+// let murderer = 'Colonel Mustard';
 //
 // const changeMurderer = function() {
 //   murderer = 'Mr. Green';
 //
 //   const plotTwist = function() {
-//     let murderer = 'Colonel Mustard';
-//
-//     const unexpectedOutcome = function() {
-//       murderer = 'Miss Scarlet';
-//     }
-//
-//     unexpectedOutcome();
+//     murderer = 'Mrs. White';
 //   }
 //
 //   plotTwist();
 // }
 //
-// const declareMurderer = function() {
+// const declareMurderer = function () {
 //   return `The murderer is ${murderer}.`;
 // }
 //
@@ -147,6 +117,40 @@ console.log(verdict);
 // const verdict = declareMurderer();
 // console.log(verdict);
 //
+// Result - CORRECT!
+
+// // #### Episode 7
+//
+// I think this will return 'The murderer is Colonel Mustard'.
+
+let murderer = 'Professor Plum';
+
+const changeMurderer = function() {
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    let murderer = 'Colonel Mustard';
+
+    const unexpectedOutcome = function() {
+      murderer = 'Miss Scarlet';
+    }
+
+    unexpectedOutcome();
+  }
+
+  plotTwist();
+}
+
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
+//
+// Result - WRONG! It would appear to be Mr Green. I'm assuming this has something to do with the fact that 'let' is missing from the murderer declaration for Mr Green.
+
 // // #### Episode 8
 //
 // const scenario = {
