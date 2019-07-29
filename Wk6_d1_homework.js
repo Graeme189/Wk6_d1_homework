@@ -56,41 +56,44 @@
 // // #### Episode 4
 //
 // I think this will return 'The suspects are Miss Scarlet, Professor Plum, Colonel Mustard' and 'Suspect three is Colonel Mustard'
-let suspectOne = 'Miss Scarlet';
-let suspectTwo = 'Professor Plum';
-let suspectThree = 'Mrs. Peacock';
-
-const declareAllSuspects = function() {
-  let suspectThree = 'Colonel Mustard';
-  return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
-}
-
-const suspects = declareAllSuspects();
-console.log(suspects);
-console.log(`Suspect three is ${suspectThree}.`);
+// let suspectOne = 'Miss Scarlet';
+// let suspectTwo = 'Professor Plum';
+// let suspectThree = 'Mrs. Peacock';
+//
+// const declareAllSuspects = function() {
+//   let suspectThree = 'Colonel Mustard';
+//   return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
+// }
+//
+// const suspects = declareAllSuspects();
+// console.log(suspects);
+// console.log(`Suspect three is ${suspectThree}.`);
 //
 // Result - Half right. I got the second line wrong. This is presuambly because the 'let suspectThree' command only works within the function.
 
 // // #### Episode 5
 //
-// const scenario = {
-//   murderer: 'Miss Scarlet',
-//   room: 'Kitchen',
-//   weapon: 'Candle Stick'
-// };
+// I think this will return 'The weapon is the Revolver'.
+const scenario = {
+  murderer: 'Miss Scarlet',
+  room: 'Kitchen',
+  weapon: 'Candle Stick'
+};
+
+const changeWeapon = function(newWeapon) {
+  scenario.weapon = newWeapon;
+}
+
+const declareWeapon = function() {
+  return `The weapon is the ${scenario.weapon}.`;
+}
+
+changeWeapon('Revolver');
+const verdict = declareWeapon();
+console.log(verdict);
 //
-// const changeWeapon = function(newWeapon) {
-//   scenario.weapon = newWeapon;
-// }
-//
-// const declareWeapon = function() {
-//   return `The weapon is the ${scenario.weapon}.`;
-// }
-//
-// changeWeapon('Revolver');
-// const verdict = declareWeapon();
-// console.log(verdict);
-//
+// Result - CORRECT!
+
 // // #### Episode 6
 //
 // let murderer = 'Colonel Mustard';
