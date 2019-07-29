@@ -38,36 +38,39 @@
 
 // // #### Episode 3
 // I think this will return 'First Verdict: Mrs Peacock' and 'Second Verdict: Professor Plum'.
-let murderer = 'Professor Plum';
-
-const declareMurderer = function() {
-  let murderer = 'Mrs. Peacock';
-  return `The murderer is ${murderer}.`;
-}
-
-const firstVerdict = declareMurderer();
-console.log('First Verdict: ', firstVerdict);
-
-const secondVerdict = `The murderer is ${murderer}.`;
-console.log('Second Verdict: ', secondVerdict);
+// let murderer = 'Professor Plum';
+//
+// const declareMurderer = function() {
+//   let murderer = 'Mrs. Peacock';
+//   return `The murderer is ${murderer}.`;
+// }
+//
+// const firstVerdict = declareMurderer();
+// console.log('First Verdict: ', firstVerdict);
+//
+// const secondVerdict = `The murderer is ${murderer}.`;
+// console.log('Second Verdict: ', secondVerdict);
 //
 // Result - CORRECT!
 
 // // #### Episode 4
 //
-// let suspectOne = 'Miss Scarlet';
-// let suspectTwo = 'Professor Plum';
-// let suspectThree = 'Mrs. Peacock';
+// I think this will return 'The suspects are Miss Scarlet, Professor Plum, Colonel Mustard' and 'Suspect three is Colonel Mustard'
+let suspectOne = 'Miss Scarlet';
+let suspectTwo = 'Professor Plum';
+let suspectThree = 'Mrs. Peacock';
+
+const declareAllSuspects = function() {
+  let suspectThree = 'Colonel Mustard';
+  return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
+}
+
+const suspects = declareAllSuspects();
+console.log(suspects);
+console.log(`Suspect three is ${suspectThree}.`);
 //
-// const declareAllSuspects = function() {
-//   let suspectThree = 'Colonel Mustard';
-//   return `The suspects are ${suspectOne}, ${suspectTwo}, ${suspectThree}.`;
-// }
-//
-// const suspects = declareAllSuspects();
-// console.log(suspects);
-// console.log(`Suspect three is ${suspectThree}.`);
-//
+// Result - Half right. I got the second line wrong. This is presuambly because the 'let suspectThree' command only works within the function.
+
 // // #### Episode 5
 //
 // const scenario = {
